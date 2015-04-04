@@ -1,0 +1,28 @@
+{
+  "manifest_version" : 2,
+  "name" : "QwickUp",
+  "version" : "0.0.0",
+  "description" : "Access your favorite lookup services (dictionary, etc.) in one place by one or two clicks of mouse.",
+  "update_url" : "https://s3.amazonaws.com/qwickup/chrome/update.xml",
+  "key" : "jikncbllfgekfjejfdnfjjeephghcken",
+  "default_locale" : "en",
+  "options_page" : "options.html",
+  "icons" : {
+    "16" : "icon16.png",
+    "48" : "icon48.png"
+  },
+  "browser_action" : {
+    "default_icon" : "icon19.png",
+    "default_title" : "QwickUp"
+  },
+  "background" : {
+    "scripts": ["storage.js", "background.js"]
+  },
+  "content_scripts" : [ {
+    "matches" : [ "<all_urls>" ],
+    "js" : [ "storage.js","content.js" ],
+    "all_frames" : true
+  } ],
+  "web_accessible_resources" : [ "icon16.png" ],
+  "permissions" : [ "tabs", "<all_urls>", "contextMenus", "storage" ]
+}

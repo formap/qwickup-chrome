@@ -1,0 +1,14 @@
+{
+  "reload_page": {
+    "message": "Please reload page to enable QwickUp."
+  },
+  "open_tab": {
+    "message": "Open in tab"
+  },
+  "open_popup": {
+    "message": "Open in popup"
+  },
+  "enable_inline": {
+    "message": "Enable inline icon"
+  }
+}
