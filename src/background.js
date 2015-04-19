@@ -68,10 +68,10 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
 function lookupOpen(query, mode) {
   query = (query || '').trim();
-  mode = /^(tab|popup)$/ ? mode : 'tab';
+  mode = /^(tab|popup)$/.test(mode) ? mode : 'tab';
   if (mode == 'tab') {
     openTab(query);
-  } else if ('popup') {
+  } else if (mode == 'popup') {
     openPopup(query);
   }
 }
